@@ -21,8 +21,6 @@ export default styled(Drawer)(({ theme, ownerState }) => {
   const { palette, boxShadows, transitions, breakpoints, functions } = theme;
   const { transparentSidenav, whiteSidenav, miniSidenav, darkMode } = ownerState;
 
-  console.log("boxShadows", boxShadows)
-
   const sidebarWidth = 250;
   const { transparent, gradients, white, background } = palette;
   const { xxl } = boxShadows;

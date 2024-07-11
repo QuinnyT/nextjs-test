@@ -5,6 +5,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { MaterialUIControllerProvider } from 'context'
 
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "assets/theme";
+
+import NavBar from "layouts/navbar"
+
 const inter = Inter({ subsets: ["latin"] });
 
 // export const metadata: Metadata = {
@@ -19,7 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <MaterialUIControllerProvider><body className={inter.className}>{children}</body></MaterialUIControllerProvider>
+    <MaterialUIControllerProvider>
+      <ThemeProvider theme={theme}>
+        <NavBar/>
+        <body className={inter.className}>{children}</body>
+      </ThemeProvider>
+    </MaterialUIControllerProvider>
     </html>
   );
 }
