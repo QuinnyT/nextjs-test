@@ -21,9 +21,11 @@ import PropTypes from "prop-types";
 // Custom styles for MDAvatar
 import MDAvatarRoot from "./MDAvatarRoot";
 
-const MDAvatar = forwardRef(({ bgColor, size, shadow, displayName, ...rest }, ref) => (
-  <MDAvatarRoot ref={ref} ownerState={{ shadow, bgColor, size }} displayName {...rest} />
+const MDAvatar = forwardRef(({ bgColor, size, shadow, ...rest }, ref) => (
+  <MDAvatarRoot ref={ref} ownerState={{ shadow, bgColor, size }} {...rest} />
 ));
+
+MDAvatar.displayName = "MDAvatar"
 
 // Setting default values for the props of MDAvatar
 MDAvatar.defaultProps = {
