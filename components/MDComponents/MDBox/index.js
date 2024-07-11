@@ -30,7 +30,7 @@ const MDBox = forwardRef(
     />
   )
 );
-
+MDBox.displayName = 'MDBox';
 // Setting default values for the props of MDBox
 MDBox.defaultProps = {
   variant: "contained",

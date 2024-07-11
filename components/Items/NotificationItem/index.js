@@ -42,6 +42,7 @@ const NotificationItem = forwardRef(({ icon, title, ...rest }, ref) => (
   </MenuItem>
 ));
 
+NotificationItem.displayName = "NotificationItem"
 // Typechecking props for the NotificationItem
 NotificationItem.propTypes = {
   icon: PropTypes.node.isRequired,
