@@ -1,9 +1,9 @@
 // Material Dashboard 2 React components
-"use client";
+// "use client";
 
-import MDBox from "components/MDComponents/MDBox";
+// import MDBox from "components/MDComponents/MDBox";
 
-import DashboardLayout from "components/LayoutContainers/DashboardLayout";
+// import DashboardLayout from "components/LayoutContainers/DashboardLayout";
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
@@ -18,7 +18,7 @@ function ChatBot() {
   useEffect(() => {
     async function getHistoryData() {
       try {
-        const response = await fetch('/api/message'); // 替换为实际的 API URL
+        const response = await fetch('/api/message');
         if (!response.ok) {
           throw new Error("获取聊天记录时出现问题");
         }
@@ -58,7 +58,7 @@ function ChatBot() {
     setMessages((prevMessages) => [...prevMessages, resMsg])
   }
   return (
-    <DashboardLayout>
+    // <DashboardLayout>
       <Container pt={6} pb={3} sx={{ overflow: 'hidden' }}>
         { messages.length > 0 ?
             <MessageList messages={messages} /> : 
@@ -66,7 +66,7 @@ function ChatBot() {
         }
         <MessageInput handleNewMessage={handleNewMessage}/>
       </Container>
-    </DashboardLayout>
+    // </DashboardLayout>
   );
 }
 
