@@ -7,6 +7,7 @@ import brandDark from "assets/images/logo-ct-dark.png";
 import { useState } from 'react';
 
 import Sidenav from 'components/Sidenav'
+import Header from 'components/MyNavbar'
 
 export default function NavBar() {
   const [controller, dispatch] = useMaterialUIController();
@@ -40,7 +41,7 @@ export default function NavBar() {
       icon: "",
       noCollapse: false,
       key: "dashboard",
-      href: "/"
+      href: "/chat"
     }, {
       name: "goods",
       icon: "",
@@ -58,14 +59,15 @@ export default function NavBar() {
 
   return (
     <>
-      <Sidenav
+      {/* <Sidenav
         color={sidenavColor}
         brand={(transparentSidenav && !darkMode) || whiteSidenav ? brandDark : brandWhite}
         brandName="Bit"
         onMouseEnter={handleOnMouseEnter}
         onMouseLeave={handleOnMouseLeave}
         routes={routes}
-      />
+      /> */}
+      <Header routes={routes}></Header>
     </>
   );
 }

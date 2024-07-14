@@ -48,6 +48,8 @@ export default styled(Drawer)(({ theme, ownerState }) => {
     [breakpoints.up("xl")]: {
       boxShadow: transparentSidenav ? "none" : xxl,
       marginBottom: transparentSidenav ? 0 : "inherit",
+      top: '10vh',
+      height: '80vh',
       left: "0",
       width: sidebarWidth,
       transform: "translateX(0)",

@@ -1,5 +1,5 @@
 // Material Dashboard 2 React components
-// "use client";
+"use client";
 
 // import MDBox from "components/MDComponents/MDBox";
 
@@ -59,7 +59,7 @@ function ChatBot() {
   }
   return (
     // <DashboardLayout>
-      <Container pt={6} pb={3} sx={{ overflow: 'hidden' }}>
+      <Container pt={6} pb={3} sx={{ overflow: 'hidden', position:'absolute', left: '20vw' , top: '15vh', height: '80vh', width: '80vw' }}>
         { messages.length > 0 ?
             <MessageList messages={messages} /> : 
             <Typography sx={{ display: 'flex', height:'80%', justifyContent: 'center', alignItems: 'center'}}>Nothing here...</Typography>
