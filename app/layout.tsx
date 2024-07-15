@@ -8,7 +8,7 @@ import { MaterialUIControllerProvider } from 'context'
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "assets/theme";
 
-import NavBar from "layouts/sidenavbar"
+import NavBar from "layouts/navbar"
 
 const inter = Inter({ subsets: ["latin"] });
 
